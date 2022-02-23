@@ -228,10 +228,15 @@ if __name__ == '__main__':
         topickle[target]['t1_text'] = wc0.get_texts(wc0.word_corpus)
         topickle[target]['t2_text'] = wc1.get_texts(wc1.word_corpus)
 
-        topickle[target]['t1'] = [v for v in wc0.word_docvecs]
-        topickle[target]['t2'] = [v for v in wc1.word_docvecs]
+        if args.language == 'english':
+            add = C.model.wv[target]
+        else:
+            add = 0
 
-    dir = os.path.dirname(args.output_corr_file)
+        topickle[target]['t1'] = [v + add for v in wc0.word_docvecs]
+        topickle[target]['t2'] = [v + add for v in wc1.word_docvecs]
+
+    dir = os.path.dirname(args.embeddings_path)
     if dir:
         os.makedirs(dir, exist_ok=True)
     dill.dump(topickle, open(args.embeddings_path, mode='wb'))
