@@ -159,7 +159,7 @@ def get_time_embeddings(embeddings_path, datasets, tokenizer, model, batch_size,
 
     for ds in datasets:
 
-        period = ds[-5:-4]
+        period = str(i+1)#ds[-5:-4]
 
         all_batches = tokens_to_batches(ds, tokenizer, batch_size, max_length, targets, lang)
         targets = set(targets)
