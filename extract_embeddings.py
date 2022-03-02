@@ -157,7 +157,7 @@ def get_time_embeddings(embeddings_path, datasets, tokenizer, model, batch_size,
     targets = list(target_dict.keys())
     vocab_vectors = {}
 
-    for ds in datasets:
+    for i, ds in enumerate(datasets):
 
         period = str(i+1)#ds[-5:-4]
 
