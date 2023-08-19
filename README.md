@@ -1,3 +1,7 @@
+[Note: Upcoming Improvements]
+
+We are actively enhancing our code and evaluations. In the near future, we will release a comprehensive journal paper detailing these advancements, along with an improved version of our codebase. We appreciate your interest and patience as we strive to provide more robust and refined solutions. Stay tuned for updates, and feel free to contact us if you'd like to test our APP algorithm.
+
 # LChange22
 
 Official repository for LChange22 - WIDID. Published results were produced in Python 3 programming environment on Windows 11 operating system. Instructions for installation assume the usage of PyPI package manager.<br/>
